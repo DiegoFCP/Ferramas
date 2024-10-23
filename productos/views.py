@@ -13,3 +13,9 @@ def lista_productos(request):
         productos = []  # Lista vacía cuando no se ha hecho una búsqueda
 
     return render(request, 'productos/lista_productos.html', {'productos': productos, 'query': query})
+
+def index(request):
+    return render(request, 'productos/index.html')
+
+def login(request):
+    return render(request, 'productos/login.html')

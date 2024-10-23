@@ -16,10 +16,9 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import include, path
-from productos.views import lista_productos
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('productos/', include('productos.urls')),
-    path('', lista_productos, name='home'),  # Página principal
+    path('', include('productos.urls')),
 ]
